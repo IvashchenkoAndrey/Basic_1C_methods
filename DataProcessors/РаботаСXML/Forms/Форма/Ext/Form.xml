@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="ДатаВыгрузки" id="1">
+			<DataPath>ДатаВыгрузки</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="ДатаВыгрузкиКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ДатаВыгрузкиРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Каталог" id="4">
+			<DataPath>Каталог</DataPath>
+			<ChoiceButton>true</ChoiceButton>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="КаталогКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="КаталогРасширеннаяПодсказка" id="6"/>
+			<Events>
+				<Event name="StartChoice">КаталогНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="РеализацияТоваров" id="17">
+			<DataPath>РеализацияТоваров</DataPath>
+			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+			<ContextMenu name="РеализацияТоваровКонтекстноеМеню" id="18"/>
+			<ExtendedTooltip name="РеализацияТоваровРасширеннаяПодсказка" id="19"/>
+		</InputField>
+		<Button name="ЗаписатьВXMLПоследовательно" id="7">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ЗаписатьВXMLПоследовательно</CommandName>
+			<ExtendedTooltip name="ЗаписатьВXMLПоследовательноРасширеннаяПодсказка" id="8"/>
+		</Button>
+		<Button name="ПрочитатьИзXMLПоследовательно" id="9">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПрочитатьИзXMLПоследовательно</CommandName>
+			<ExtendedTooltip name="ПрочитатьИзXMLПоследовательноРасширеннаяПодсказка" id="10"/>
+		</Button>
+		<Button name="ПрочитатьЧерезDOM" id="11">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПрочитатьЧерезDOM</CommandName>
+			<ExtendedTooltip name="ПрочитатьЧерезDOMРасширеннаяПодсказка" id="12"/>
+		</Button>
+		<Button name="ПрочитатьЧерезDOMВариант2" id="13">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ПрочитатьЧерезDOMВариант2</CommandName>
+			<ExtendedTooltip name="ПрочитатьЧерезDOMВариант2РасширеннаяПодсказка" id="14"/>
+		</Button>
+		<Button name="Сериализация" id="15">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Сериализация</CommandName>
+			<ExtendedTooltip name="СериализацияРасширеннаяПодсказка" id="16"/>
+		</Button>
+		<Button name="Десериализация" id="20">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.Десериализация</CommandName>
+			<ExtendedTooltip name="ДесериализацияРасширеннаяПодсказка" id="21"/>
+		</Button>
+		<Button name="СериализоватьXMLЧерезXDTO" id="22">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.СериализоватьXMLЧерезXDTO</CommandName>
+			<ExtendedTooltip name="СериализоватьXMLЧерезXDTOРасширеннаяПодсказка" id="23"/>
+		</Button>
+		<Button name="ДесериализоватьXMLЧерезXDTOНаСервере" id="24">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ДесериализоватьXMLЧерезXDTOНаСервере</CommandName>
+			<ExtendedTooltip name="ДесериализоватьXMLЧерезXDTOНаСервереРасширеннаяПодсказка" id="25"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РаботаСXML</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДатаВыгрузки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Каталог" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеализацияТоваров" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реализация товаров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.РеализацияТоваровИУслуг</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьВXMLПоследовательно" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать в XML последовательно</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать ВXMLПоследовательно</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьВXMLПоследовательно</Action>
+		</Command>
+		<Command name="ПрочитатьИзXMLПоследовательно" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать из XML последовательно</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать из XMLПоследовательно</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрочитатьИзXMLПоследовательно</Action>
+		</Command>
+		<Command name="ПрочитатьЧерезDOM" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать через DOM</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать через DOM</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрочитатьЧерезDOM</Action>
+		</Command>
+		<Command name="ПрочитатьЧерезDOMВариант2" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать через DOM вариант 2</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать через DOMВариант2</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрочитатьЧерезDOMВариант2</Action>
+		</Command>
+		<Command name="Сериализация" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сериализация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сериализация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сериализация</Action>
+		</Command>
+		<Command name="Десериализация" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Десериализация</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Десериализация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Десериализация</Action>
+		</Command>
+		<Command name="СериализоватьXMLЧерезXDTO" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сериализовать XML через XDTO</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сериализовать XMLЧерез XDTO</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СериализоватьXMLЧерезXDTO</Action>
+		</Command>
+		<Command name="ДесериализоватьXMLЧерезXDTOНаСервере" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Десериализовать XMLЧерез XDTOНа сервере</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Десериализовать XMLЧерез XDTOНа сервере</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДесериализоватьXMLЧерезXDTOНаСервере</Action>
+		</Command>
+	</Commands>
+</Form>
